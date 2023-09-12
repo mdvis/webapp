@@ -7,9 +7,18 @@
             body {
                 margin: 0;
             }
+            .tag {
+                pointer-events:all;
+            }
         </style>
     </head>
     <body>
+        <div style="position:absolute;right:0;top:0;color:green">
+            我是那个大厦:
+            <p id='nm'></p>
+        </div>
+        <div class="tag" id="tag" onclick='document.getElementById("nm") .innerHTML=this.textContent;' style="color:red;font-size:20px;">大厦1</div>
+        <div class="tag" id="tag2" onclick='document.getElementById("nm") .innerHTML=this.textContent;' style="color:red;font-size:20px;">大厦2</div>
         <script
             async
             src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
@@ -17,11 +26,11 @@
         <script type="importmap">
             {
                 "imports": {
-                    "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
-                    "three/addons/": "https://unpkg.com/three@0.154.0/examples/jsm/"
+                    "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@0.155.0/examples/jsm/"
                 }
             }
         </script>
-        <script type="module" src="/main.js"></script>
+        <script type="module" src='./main.js' > </script>
     </body>
 </html>
